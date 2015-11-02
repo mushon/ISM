@@ -39,7 +39,6 @@
 
             theater
                 .on('type:start, erase:start', function () {
-                    console.log(theater.getCurrentActor())
                     theater.getCurrentActor().$element.classList.add('actor__content--typing')
                 })
                 .on('type:end, erase:end', function () {
