@@ -35,16 +35,17 @@
 
         <script src="theater.min.js"></script>
         <script>
-            var theater = new TheaterJS()
+            var theater = theaterJS()
 
             theater
-                .subscribe('type:start, erase:start', function () {
+                .on('type:start, erase:start', function () {
+                    console.log(theater.getCurrentActor())
                     theater.getCurrentActor().$element.classList.add('actor__content--typing')
                 })
-                .subscribe('type:end, erase:end', function () {
+                .on('type:end, erase:end', function () {
                     theater.getCurrentActor().$element.classList.remove('actor__content--typing')
                 })
-                .subscribe('type:start, erase:start', function () {
+                .on('type:start, erase:start', function () {
                     if (theater.getCurrentActor().name === 'vader') {
                         document.body.classList.add('dark')
                     } else {
@@ -53,8 +54,8 @@
                 })
 
             theater
-                .describe('vader', { speed: 0.8, accuracy: 0.6 })
-                .describe('luke')
+                .addActor('vader', { speed: 0.8, accuracy: 0.6 })
+                .addActor('luke')
                 .addScene('vader:Luke', 400)
                 .addScene('luke:What?')
                 .addScene('vader:I am your father.')
