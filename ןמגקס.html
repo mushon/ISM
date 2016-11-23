@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <style>
+      body{
+        background: #ddd;
+        margin: 0;
+      }
+      #container {
+        width: 1920px;
+        height: 700px;
+        padding: 190px 0;
+        background: #fff;
+        position: relative;
+      }
+      #container::before {
+        content:"";
+        background: #F6D925 url(img/back.svg) center center;
+        height: 700px;
+        width: 500px;
+        top: 190px;
+        left: 50%;
+        margin-left: -250px;
+        position: absolute;
+        display: block;
+      }
+      #container::after{
+        content:"";
+        background: url(img/front.svg) center center;
+        height: 700px;
+        width: 500px;
+        top: 190px;
+        left: 50%;
+        margin-left: -250px;
+        position: absolute;
+        display: block;
+      }
+      h1 {
+        font-family: "futura_ltcondensedextrabold", sans;
+        font-size: 251px;
+        position: relative;
+        text-align: center;
+        margin-top: 147px;
+      }
+      h2 {
+        font-family: "futura_ltcondensedlight", sans;
+        font-size: 20px;
+        text-align: left;
+        width: 500px;
+        bottom: 181px;
+        left: 50%;
+        margin-left: -239px;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="poster">
+        <h1>
+          <span id="ism"></span><span>ISM</span>
+        </h1>
+        <h2 id="desc"></h2>
+      </div>
+    </div>
+    <!-- <div id="vader"></div>
+    <div id="luke"></div> -->
+    <script src="../dist/theater.min.js"></script>
+    <script>
+
+      /* global theaterJS */
+      var theater = theaterJS(
+        { locale: 'en',
+          "minSpeed": 100,
+          "maxSpeed": 250
+        }
+      )
+
+      var data = {
+        "ABSOLUTISM" : {
+          "title" : "ABSOLUTISM",
+          "desc" : "doctrine of government by a single absolute ruler; autocracy"
+        },
+        "ABSURDISM" : {
+          "title" : "ABSURDISM",
+          "desc" : "doctrine that we live in an irrational universe"
+        },
+        "ACADEMICISM" : {
+          "title" : "ACADEMICISM",
+          "desc" : "doctrine that nothing can be known"
+        },
+        "ACCIDENTALISM" : {
+          "title" : "ACCIDENTALISM",
+          "desc" : "theory that events do not have causes"
+        },
+        "ADAMITISM" : {
+          "title" : "ADAMITISM",
+          "desc" : "nakedness for religious reasons"
+        },
+        "AESTHETICISM" : {
+          "title" : "AESTHETICISM",
+          "desc" : "doctrine that beauty is central to other moral principles"
+        },
+        "AGAPISM" : {
+          "title" : "AGAPISM",
+          "desc" : "ethics of love"
+        },
+        "AGATHISM" : {
+          "title" : "AGATHISM",
+          "desc" : "belief in ultimate triumph of good despite evil means"
+        },
+        "AGNOSTICISM" : {
+          "title" : "AGNOSTICISM",
+          "desc" : "doctrine that we can know nothing beyond material phenomena"
+        },
+        "ALTRUISM" : {
+          "title" : "ALTRUISM",
+          "desc" : "the quality of unselfish concern for the welfare of others"
+        },
+        "ANARCHISM" : {
+          "title" : "ANARCHISM",
+          "desc" : "doctrine that all governments should be abolished"
+        },
+        "ANIMISM" : {
+          "title" : "ANIMISM",
+          "desc" : "attribution of soul to inanimate objects"
+        },
+        "ASCETICISM" : {
+          "title" : "ASCETICISM",
+          "desc" : "doctrine that self-denial of the body permits spiritual enlightenment"
+        },
+        "ASPHETERISM" : {
+          "title" : "ASPHETERISM",
+          "desc" : "denial of the right to private property"
+        },
+        "ATHEISM" : {
+          "title" : "ATHEISM",
+          "desc" : "belief that there is no God"
+        },
+        "BONISM" : {
+          "title" : "BONISM",
+          "desc" : "the doctrine that the world is good but not perfect"
+        },
+        "CAPITALISM" : {
+          "title" : "CAPITALISM",
+          "desc" : "doctrine that private ownership and free markets should govern economies"
+        },
+        "CASUALISM" : {
+          "title" : "CASUALISM",
+          "desc" : "the belief that chance governs all things"
+        },
+        "CATASTROPHISM" : {
+          "title" : "CATASTROPHISM",
+          "desc" : "belief in rapid geological and biological change"
+        },
+        "COLLECTIVISM" : {
+          "title" : "COLLECTIVISM",
+          "desc" : "doctrine of communal control of means of production"
+        },
+        "COMMUNISM" : {
+          "title" : "COMMUNISM",
+          "desc" : "theory of classless society in which individuals cannot own property"
+        },
+        "CONCEPTUALISM" : {
+          "title" : "CONCEPTUALISM",
+          "desc" : "theory that universal truths exist as mental concepts"
+        },
+        "CONSERVATISM" : {
+          "title" : "CONSERVATISM",
+          "desc" : "belief in maintaining political and social traditions"
+        },
+        "CONSTRUCTIVISM" : {
+          "title" : "CONSTRUCTIVISM",
+          "desc" : "belief that knowledge and reality do not have an objective value"
+        },
+        "CONSUMERISM" : {
+          "title" : "CONSUMERISM",
+          "desc" : "the theory that increasing use of goods is beneficial"
+        },
+        "DESPOTISM" : {
+          "title" : "DESPOTISM",
+          "desc" : "a form of government in which the ruler is unconstrained"
+        },
+        "DETERMINISM" : {
+          "title" : "DETERMINISM",
+          "desc" : "doctrine that events are predetermined by preceding events or laws"
+        },
+        "DUALISM" : {
+          "title" : "DUALISM",
+          "desc" : "doctrine that the universe is controlled by one good and one evil force"
+        },
+        "EGALITARIANISM" : {
+          "title" : "EGALITARIANISM",
+          "desc" : "belief that humans ought to be equal in rights and privileges"
+        },
+        "EGOISM" : {
+          "title" : "EGOISM",
+          "desc" : "doctrine that the pursuit of self-interest is the highest good"
+        },
+        "EMOTIVISM" : {
+          "title" : "EMOTIVISM",
+          "desc" : "theory that moral statements are inherently biased"
+        },
+        "EMPIRICISM" : {
+          "title" : "EMPIRICISM",
+          "desc" : "doctrine that the experience of the senses is the only source of knowledge"
+        },
+        "ENTRYISM" : {
+          "title" : "ENTRYISM",
+          "desc" : "doctrine of joining a group to change its policies"
+        },
+        "EXISTENTIALISM" : {
+          "title" : "EXISTENTIALISM",
+          "desc" : "doctrine of individual human responsibility in an unfathomable universe"
+        },
+        "EXPERIENTIALISM" : {
+          "title" : "EXPERIENTIALISM",
+          "desc" : "doctrine that knowledge comes from experience"
+        },
+        "FALLIBILISM" : {
+          "title" : "FALLIBILISM",
+          "desc" : "the doctrine that empirical knowledge is uncertain"
+        },
+        "FATALISM" : {
+          "title" : "FATALISM",
+          "desc" : "doctrine that events are fixed and humans are powerless"
+        },
+        "FEMINISM" : {
+          "title" : "FEMINISM",
+          "desc" : "a doctrine that advocates equal rights for women"
+        },
+        "FINALISM" : {
+          "title" : "FINALISM",
+          "desc" : "belief that an end has or can be reached"
+        },
+        "FUNCTIONALISM" : {
+          "title" : "FUNCTIONALISM",
+          "desc" : "doctrine emphasising utility and function"
+        },
+        "HEDONISM" : {
+          "title" : "HEDONISM",
+          "desc" : "belief that pleasure is the highest good"
+        },
+        "HISTORICISM" : {
+          "title" : "HISTORICISM",
+          "desc" : "belief that all phenomena are historically determined"
+        },
+        "HOLISM" : {
+          "title" : "HOLISM",
+          "desc" : "doctrine that parts of any thing must be understood in relation to the whole"
+        },
+        "HUMANISM" : {
+          "title" : "HUMANISM",
+          "desc" : "belief that human interests and mind are paramount"
+        },
+        "IDEALISM" : {
+          "title" : "IDEALISM",
+          "desc" : "belief that our experiences of the world consist of ideas"
+        },
+        "IGNORANTISM" : {
+          "title" : "IGNORANTISM",
+          "desc" : "doctrine that ignorance is a favourable thing"
+        },
+        "ILLUMINISM" : {
+          "title" : "ILLUMINISM",
+          "desc" : "belief in an inward spiritual light"
+        },
+        "ILLUSIONISM" : {
+          "title" : "ILLUSIONISM",
+          "desc" : "belief that the external world is philosophy"
+        },
+        "IMAGISM" : {
+          "title" : "IMAGISM",
+          "desc" : "doctrine of use of precise images with unrestricted subject"
+        },
+        "IMMATERIALISM" : {
+          "title" : "IMMATERIALISM",
+          "desc" : "the doctrine that there is no material substance"
+        },
+        "IMMORALISM" : {
+          "title" : "IMMORALISM",
+          "desc" : "rejection of morality"
+        },
+        "INDIVIDUALISM" : {
+          "title" : "INDIVIDUALISM",
+          "desc" : "belief that individual interests and rights are paramount"
+        },
+        "INTELLECTUALISM" : {
+          "title" : "INTELLECTUALISM",
+          "desc" : "belief that all knowledge is derived from reason"
+        },
+        "INTUITIONISM" : {
+          "title" : "INTUITIONISM",
+          "desc" : "belief that the perception of truth is by intuition"
+        },
+        "ISOLATIONISM" : {
+          "title" : "ISOLATIONISM",
+          "desc" : "a policy of nonparticipation in international relations"
+        },
+        "LEGALISM" : {
+          "title" : "LEGALISM",
+          "desc" : "belief that salvation depends on strict adherence to the law"
+        },
+        "LIBERALISM" : {
+          "title" : "LIBERALISM",
+          "desc" : "doctrine of social change and tolerance"
+        },
+        "LIBERTARIANISM" : {
+          "title" : "LIBERTARIANISM",
+          "desc" : "doctrine that personal liberty is the highest value"
+        },
+        "MALISM" : {
+          "title" : "MALISM",
+          "desc" : "the belief that the world is evil"
+        },
+        "MATERIALISM" : {
+          "title" : "MATERIALISM",
+          "desc" : "the philosophical theory that matter is the only reality"
+        },
+        "MECHANISM" : {
+          "title" : "MECHANISM",
+          "desc" : "belief that life is explainable by mechanical forces"
+        },
+        "MONISM" : {
+          "title" : "MONISM",
+          "desc" : "belief that all things can be placed in one category"
+        },
+        "MONOTHEISM" : {
+          "title" : "MONOTHEISM",
+          "desc" : "belief in only one God"
+        },
+        "MORTALISM" : {
+          "title" : "MORTALISM",
+          "desc" : "belief that the soul is mortal"
+        },
+        "MUTUALISM" : {
+          "title" : "MUTUALISM",
+          "desc" : "belief in mutual dependence of society and the individual"
+        },
+        "NATIONALISM" : {
+          "title" : "NATIONALISM",
+          "desc" : "the doctrine that your country's interests are superior"
+        },
+        "NATIVISM" : {
+          "title" : "NATIVISM",
+          "desc" : "belief that the mind possesses inborn thoughts"
+        },
+        "NATURALISM" : {
+          "title" : "NATURALISM",
+          "desc" : "belief that the world can be explained in terms of natural forces"
+        },
+        "NIHILISM" : {
+          "title" : "NIHILISM",
+          "desc" : "denial of all reality; extreme scepticism"
+        },
+        "NOMINALISM" : {
+          "title" : "NOMINALISM",
+          "desc" : "doctrine that naming of things defines reality"
+        },
+        "OBJECTIVISM" : {
+          "title" : "OBJECTIVISM",
+          "desc" : "doctrine that all reality is objective"
+        },
+        "OPTIMISM" : {
+          "title" : "OPTIMISM",
+          "desc" : "doctrine that we live in the best of all possible worlds"
+        },
+        "PANSEXUALISM" : {
+          "title" : "PANSEXUALISM",
+          "desc" : "theory that all thought derived from sexual instinct"
+        },
+        "PANSPERMATISM" : {
+          "title" : "PANSPERMATISM",
+          "desc" : "belief in origin of life from extraterrestrial germs"
+        },
+        "PARALLELISM" : {
+          "title" : "PARALLELISM",
+          "desc" : "belief that matter and mind don’t interact but relate"
+        },
+        "PERFECTIONISM" : {
+          "title" : "PERFECTIONISM",
+          "desc" : "doctrine that moral perfection constitutes the highest value"
+        },
+        "PERSONALISM" : {
+          "title" : "PERSONALISM",
+          "desc" : "doctrine that humans possess spiritual freedom"
+        },
+        "PESSIMISM" : {
+          "title" : "PESSIMISM",
+          "desc" : "doctrine that the universe is essentially evil"
+        },
+        "PHENOMENALISM" : {
+          "title" : "PHENOMENALISM",
+          "desc" : "belief that phenomena are the only realities"
+        },
+        "POSITIVISM" : {
+          "title" : "POSITIVISM",
+          "desc" : "doctrine that that which is not observable is not knowable"
+        },
+        "PRAGMATISM" : {
+          "title" : "PRAGMATISM",
+          "desc" : "doctrine emphasizing practical value of philosophy"
+        },
+        "PRIMITIVISM" : {
+          "title" : "PRIMITIVISM",
+          "desc" : "doctrine that a simple and natural life is morally best"
+        },
+        "PROBABILISM" : {
+          "title" : "PROBABILISM",
+          "desc" : "belief that knowledge is always probable but never absolute"
+        },
+        "QUIETISM" : {
+          "title" : "QUIETISM",
+          "desc" : "doctrine of enlightenment through mental tranquility"
+        },
+        "RACISM" : {
+          "title" : "RACISM",
+          "desc" : "belief that race is the primary determinant of human capacities"
+        },
+        "RATIONALISM" : {
+          "title" : "RATIONALISM",
+          "desc" : "belief that reason is the fundamental source of knowledge"
+        },
+        "REALISM" : {
+          "title" : "REALISM",
+          "desc" : "doctrine that objects of cognition are real"
+        },
+        "REDUCTIONISM" : {
+          "title" : "REDUCTIONISM",
+          "desc" : "belief that complex phenomena are reducible to simple ones"
+        },
+        "REPUBLICANISM" : {
+          "title" : "REPUBLICANISM",
+          "desc" : "belief that a republic is the best form of government"
+        },
+        "RESISTENTIALISM" : {
+          "title" : "RESISTENTIALISM",
+          "desc" : "humorous theory that inanimate objects display malice towards humans"
+        },
+        "ROMANTICISM" : {
+          "title" : "ROMANTICISM",
+          "desc" : "belief in sentimental feeling in artistic expression"
+        },
+        "SCIENTISM" : {
+          "title" : "SCIENTISM",
+          "desc" : "belief that the methods of science are universally applicable"
+        },
+        "SENSATIONALISM" : {
+          "title" : "SENSATIONALISM",
+          "desc" : "belief that ideas originate solely in sensation"
+        },
+        "SEXISM" : {
+          "title" : "SEXISM",
+          "desc" : "belief in systematic inequalities between the sexes"
+        },
+        "SKEPTICISM" : {
+          "title" : "SKEPTICISM",
+          "desc" : "doctrine that true knowledge is always uncertain"
+        },
+        "SOCIALISM" : {
+          "title" : "SOCIALISM",
+          "desc" : "doctrine of centralized state control of wealth and property"
+        },
+        "SOLIPSISM" : {
+          "title" : "SOLIPSISM",
+          "desc" : "theory that self-existence is the only certainty"
+        },
+        "SPIRITUALISM" : {
+          "title" : "SPIRITUALISM",
+          "desc" : "belief that nothing is real except the soul or spirit"
+        },
+        "STOICISM" : {
+          "title" : "STOICISM",
+          "desc" : "belief in indifference to pleasure or pain"
+        },
+        "SUBJECTIVISM" : {
+          "title" : "SUBJECTIVISM",
+          "desc" : "doctrine that all knowledge is subjective"
+        },
+        "TITANISM" : {
+          "title" : "TITANISM",
+          "desc" : "spirit of revolt or defiance against social conventions"
+        },
+        "TOTALITARIANISM" : {
+          "title" : "TOTALITARIANISM",
+          "desc" : "the principle of unrestricted power in government"
+        },
+        "UNIVERSALISM" : {
+          "title" : "UNIVERSALISM",
+          "desc" : "belief in universal salvation"
+        },
+        "UTILITARIANISM" : {
+          "title" : "UTILITARIANISM",
+          "desc" : "belief that utility of actions determines moral value"
+        },
+        "VITALISM" : {
+          "title" : "VITALISM",
+          "desc" : "the doctrine that there is a vital force behind life"
+        },
+        "VOLUNTARISM" : {
+          "title" : "VOLUNTARISM",
+          "desc" : "belief that the will dominates the intellect"
+        },
+        "ZIONISM" : {
+          "title" : "ZIONISM",
+          "desc" : "a movement to support Jewish national independence in Israel"
+        },
+        "JUDAISM" : {
+          "title" : "JUDAISM",
+          "desc" : "the religion, philosophy, culture and way of life of the Jewish people"
+        }
+      };
+
+      function shuffle(o){ //v1.0
+          for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+          return o;
+      };
+
+      var keyArray = Object.keys(data);
+
+      shuffle(keyArray); // example (shuffle function has to be implemented, see above)
+
+      for (var i = 0; i < keyArray.length; ++i) {
+          var current = data[keyArray[i]];
+          // do stuff with current dataset
+      }
+
+      theater
+        .addActor('ism', { accuracy: 0.7, speed: 0.5 })
+        .addActor('desc', { accuracy: 1, speed: 2 })
+
+
+      for (var i = 0; i < keyArray.length; ++i) {
+
+          var obj = data[keyArray[i]];
+
+          theater
+            .addScene('ism:', 500, 'ism:'+obj.title.slice(0, -3))
+            .addScene('desc:'+obj.desc, 2000, 'desc:')
+      }
+
+      theater
+        .addScene(theater.replay)
+    </script>
+  </body>
+</html>
