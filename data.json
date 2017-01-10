@@ -430,5 +430,33 @@ var data = {
   "JUDAISM" : {
     "title" : "JUDAISM",
     "desc" : "the religion, philosophy, culture and way of life of the Jewish people"
+  },
+  "ANTISEMITISM" : {
+    "title" : "ANTISEMITISM",
+    "desc" : "hostility, prejudice, or discrimination against Jews"
+  },
+  "AGEISM" : {
+    "title" : "AGEISM",
+    "desc" : "stereotyping and discriminating on the basis of age"
+  },
+  "ALCOHOLISM" : {
+    "title" : "ALCOHOLISM",
+    "desc" : "a broad term for any drinking of alcohol that results in problems"
+  },
+  "MODERNISM" : {
+    "title" : "MODERNISM",
+    "desc" : "a deliberate philosophical and practical estrangement or divergence from the past"
+  },
+  "EXPRESSIONISM" : {
+    "title" : "EXPRESSIONISM",
+    "desc" : " a movement which sought to express emotions rather than to represent external reality"
+  },
+  "BARBARISM" : {
+    "title" : "BARBARISM",
+    "desc" : "cruel and violent behavior"
+  },
+  "POSTHUMANISM" : {
+    "title" : "POSTHUMANISM",
+    "desc" : "the doctrine advancing though and existance beyond the framework of being human"
   }
 };
