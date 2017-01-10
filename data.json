@@ -445,11 +445,11 @@ var data = {
   },
   "MODERNISM" : {
     "title" : "MODERNISM",
-    "desc" : "a deliberate philosophical and practical estrangement or divergence from the past"
+    "desc" : "a deliberate philosophical and practical divergence from the past"
   },
   "EXPRESSIONISM" : {
     "title" : "EXPRESSIONISM",
-    "desc" : " a movement which sought to express emotions rather than to represent external reality"
+    "desc" : " a movement seeking to express emotions rather than represent external reality"
   },
   "BARBARISM" : {
     "title" : "BARBARISM",
@@ -458,5 +458,10 @@ var data = {
   "POSTHUMANISM" : {
     "title" : "POSTHUMANISM",
     "desc" : "the doctrine advancing though and existance beyond the framework of being human"
+  },
+  "NARCISSISM" : {
+    "title" : "NARCISSISM",
+    "desc" : "the pursuit of gratification from vanity"
   }
+
 };

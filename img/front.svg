@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="500px" height="700px" viewBox="0 0 500 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
     <title>front</title>
     <desc>Created with Sketch.</desc>
     <defs>
@@ -13,7 +13,7 @@
         <g id="ROMANTICISM" transform="translate(-710.000000, 0.000000)">
             <g id="front" transform="translate(710.000000, 0.000000)">
                 <use id="Rectangle" stroke="#F6D925" mask="url(#mask-2)" stroke-width="0.02" xlink:href="#path-1"></use>
-                <path d="M79.5,29.5 C79.5,29.5 142.35524,122.222984 181.356163,166.575836 C220.357086,210.928688 328.045597,343.341607 349.203125,371.800781 C401.238895,441.794548 447.5,524.5 447.5,524.5" id="blue" stroke="#334692" stroke-width="48"></path>
+                <path d="M79.5,29.5 C79.5,29.5 142.35524,122.222984 181.356163,166.575836 C220.357086,210.928688 328.045597,343.341607 349.203125,371.800781 C401.238895,441.794548 447.5,524.5 447.5,524.5" id="blue" stroke="#283671" stroke-width="48"></path>
             </g>
         </g>
     </g>
