@@ -1,22 +1,21 @@
 body{
-  background: #000;
+  background: #D8D8D8;
   margin: 0;
 }
-#container {
+#container,
+#container::before {
   width: 1920px;
   height: 1170px;
-  margin-top: 30px;
-  /*top:0;
-  left:0;
-  right:0;
-  bottom:0;*/
-  /*background: #fff;*/
+  border-top: 30px solid #000;
   position: absolute;;
-  /* Rectangle: */
-  background: #D8D8D8;
-  box-shadow: inset 0 0 500px 50px #000000, inset 0 0 500px 50px #000000;
+  box-shadow: inset 0 0 500px 50px #000000;
 }
-#container::before {
+#container::before{
+  content: "";
+  border: 0;
+}
+/*#container::before,*/
+#bg {
   content:"";
   background: #F6D925 url(img/back.svg) center center;
   /*background: url(img/ref.png) center center;*/
@@ -45,8 +44,9 @@ body{
 h1 {
   font-family: "futura_ltcondensedextrabold", sans;
   font-size: 251px;
-  position: relative;
+  position: absolute;
   text-align: center;
+  width: 100%;
   margin-top: 397px;
 }
 h2 {
