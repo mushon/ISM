@@ -462,6 +462,14 @@ var data = {
   "NARCISSISM" : {
     "title" : "NARCISSISM",
     "desc" : "the pursuit of gratification from vanity"
+  },
+  "ACTIVISM" : {
+    "title" : "ACTIVISM",
+    "desc" : "efforts to promote reform or stasis with the desire to improve society"
+  },
+  "CANNIBALISM" : {
+    "title" : "CANNIBALISM",
+    "desc" : "The act or practice of eating human flesh by mankind"
   }
 
 };
