@@ -470,6 +470,10 @@ var data = {
   "CANNIBALISM" : {
     "title" : "CANNIBALISM",
     "desc" : "The act or practice of eating human flesh by mankind"
+  },
+  "COLONIALISM" : {
+    "title" : "COLONIALISM",
+    "desc" : "policy in political government or extension of territory"
   }
 
 };
